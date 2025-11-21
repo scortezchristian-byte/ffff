@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Sign up - EduTrack</title>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="page-bg">
+			<div class="card">
+				<h1 class="title">Sign up</h1>
+
+				<form class="signup-grid" novalidate>
+					<div class="left">
+						<label class="field">
+							<span class="label-text">Username</span>
+							<input type="text" name="username" placeholder="" />
+						</label>
+
+						<label class="field">
+							<span class="label-text">Email</span>
+							<input type="email" name="email" placeholder="" />
+						</label>
+
+						<label class="field">
+							<span class="label-text">Password</span>
+							<input type="password" name="password" placeholder="" />
+						</label>
+
+						<label class="field">
+							<span class="label-text">Re-Enter Password</span>
+							<input type="password" name="password2" placeholder="" />
+						</label>
+					</div>
+
+					<div class="right">
+						<div class="logo-wrap">
+							<svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+								<circle cx="50" cy="50" r="48" fill="#fff" stroke="#c7eaf7" stroke-width="2"/>
+								<path d="M28 60 L48 40 L70 56" stroke="#1eaed9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+								<text x="50" y="78" font-size="10" text-anchor="middle" fill="#2b9fbf" font-family="Poppins, Arial">EduTrack</text>
+							</svg>
+						</div>
+
+						<div class="roles">
+							<button type="button" class="role">STUDENT</button>
+							<button type="button" class="role">GUARDIAN</button>
+						</div>
+
+						<div class="agreements">
+							<label class="check"><input type="checkbox" /> I agree to the <a href="#">Term of Services</a></label>
+							<label class="check"><input type="checkbox" /> I agree to the <a href="#">Data Privacy</a></label>
+						</div>
+					</div>
+				</form>
+
+				<div class="submit-row">
+					<button class="signup-btn">Sign up</button>
+				</div>
+
+				<p class="small-center">Already have an account? <a href="#">CLICK HERE</a></p>
+			</div>
+		</div>
+	</body>
+	<script src="index.js"></script>
+</html>

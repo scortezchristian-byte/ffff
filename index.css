@@ -1,0 +1,119 @@
+:root{
+	--bg:#283842; /* page background */
+	--card-bg:#fff;
+	--accent:#06b6f4; /* bright cyan */
+	--muted:#e9e9e9;
+	--control-border:#222;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background:var(--bg);
+	color:#111;
+}
+
+.page-bg{
+	min-height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:40px 20px;
+}
+
+.card{
+	width:90%;
+	max-width:1100px;
+	background:var(--card-bg);
+	border-radius:60px;
+	padding:48px 56px 36px 56px;
+	box-shadow:0 0 0 4px rgba(0,0,0,0.02);
+	border:2px solid rgba(0,0,0,0.12);
+	position:relative;
+}
+
+.title{
+	text-align:center;
+	color:var(--accent);
+	font-size:44px;
+	margin:0 0 18px 0;
+	font-weight:700;
+}
+
+.signup-grid{
+	display:grid;
+	grid-template-columns:1fr 360px;
+	gap:24px 40px;
+	align-items:start;
+}
+
+.left{padding-right:10px}
+
+.field{display:block;margin-bottom:18px}
+.label-text{display:block;margin-bottom:8px;font-size:14px;color:#222}
+.field input{
+	width:100%;
+	height:54px;
+	border-radius:28px;
+	border:2px solid var(--control-border);
+	padding:10px 22px;
+	background:var(--muted);
+	font-size:16px;
+	outline:none;
+}
+.field input:focus{box-shadow:0 0 0 3px rgba(6,182,244,0.12)}
+
+.right{display:flex;flex-direction:column;align-items:center}
+.logo-wrap{display:flex;justify-content:center;align-items:center;margin-bottom:18px}
+.logo{width:110px;height:110px}
+
+.roles{width:100%;display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.role{
+	background:#e7e7e7;border:2px solid #222;padding:12px 18px;font-weight:600;cursor:pointer;border-radius:2px;font-size:16px}
+.role:first-child{border-bottom:1px solid rgba(0,0,0,0.2)}
+
+.agreements{align-self:stretch;padding-left:6px}
+.check{display:flex;align-items:center;gap:8px;margin:8px 0;color:#222}
+.check input{width:16px;height:16px}
+.check a{color:var(--accent);text-decoration:none;font-weight:600}
+
+.submit-row{display:flex;justify-content:center;margin-top:22px}
+.signup-btn{
+	background:linear-gradient(180deg,#14bdf9,#02a7df);
+	color:white;border:none;padding:18px 48px;border-radius:999px;font-size:26px;font-weight:800;cursor:pointer;min-width:360px;box-shadow:0 6px 0 rgba(0,0,0,0.08);
+}
+.signup-btn:active{transform:translateY(2px);box-shadow:0 3px 0 rgba(0,0,0,0.06)}
+
+.small-center{font-size:12px;text-align:center;color:#666;margin-top:8px}
+.small-center a{color:#222;font-weight:700;text-decoration:none}
+
+/* Responsive */
+@media (max-width:980px){
+	.signup-grid{grid-template-columns:1fr 300px}
+	.signup-btn{min-width:280px;font-size:22px}
+}
+
+@media (max-width:720px){
+	.card{padding:28px;border-radius:28px}
+	.signup-grid{grid-template-columns:1fr;gap:12px}
+	.right{flex-direction:row;gap:12px;align-items:center}
+	.roles{flex-direction:row;width:auto}
+	.role{flex:1}
+	.logo{width:82px;height:82px}
+	.signup-btn{min-width:200px;width:100%}
+}
+
+/* Selected role */
+.role.selected{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* Invalid field */
+.field input.invalid{border-color:#d53e3e;box-shadow:0 0 0 3px rgba(213,62,62,0.08)}
+
+/* Simple toast */
+.site-toast{position:fixed;left:50%;transform:translateX(-50%);bottom:28px;padding:12px 18px;border-radius:8px;background:#222;color:#fff;opacity:0;pointer-events:none;transition:opacity .18s ease}
+.site-toast.success{background:linear-gradient(90deg,#06b6f4,#0ea5b7);opacity:1;pointer-events:auto}
+.site-toast.error{background:#d53e3e;opacity:1;pointer-events:auto}
+
+
